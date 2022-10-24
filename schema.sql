@@ -1,6 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
-CREATE TABLE animal(
+CREATE TABLE animals(
    id INT GENERATED ALWAYS AS IDENTITY,
    name    VARCHAR(100),
    date_of_birth  DATE,
@@ -9,3 +9,4 @@ CREATE TABLE animal(
    weight_kg DECIMAL,
    PRIMARY KEY(id)      
 );
+
