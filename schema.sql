@@ -1,5 +1,7 @@
 /* Database schema to keep the structure of entire database. */
-DROP TABLE IF EXISTS animals
+DROP TABLE IF EXISTS animals;
+DROP TABLE IF EXISTS owners;
+DROP TABLE IF EXISTS species;
 
 CREATE TABLE animals(
    id INT GENERATED ALWAYS AS IDENTITY,
@@ -12,3 +14,21 @@ CREATE TABLE animals(
    PRIMARY KEY(id)      
 );
 
+
+CREATE TABLE owners(
+   id INT GENERATED ALWAYS AS IDENTITY,
+   full_name    VARCHAR(255),
+   age INT,
+   PRIMARY KEY(id)      
+);
+
+CREATE TABLE species(
+   id INT GENERATED ALWAYS AS IDENTITY,
+   name    VARCHAR(255),
+   PRIMARY KEY(id)      
+);
+
+ALTER TABLE animals
+DROP COLUMN species,
+ADD species_id INT,
+ADD owner_id INT,
