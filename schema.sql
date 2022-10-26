@@ -32,3 +32,11 @@ ALTER TABLE animals
 DROP COLUMN species,
 ADD species_id INT,
 ADD owner_id INT,
+ADD CONSTRAINT fk_species 
+    FOREIGN KEY(species_id)
+     REFERENCES species(id)
+      ON DELETE CASCADE,
+ADD  CONSTRAINT fk_owner 
+   FOREIGN KEY(owner_id)
+    REFERENCES owners(id)
+     ON DELETE CASCADE;
