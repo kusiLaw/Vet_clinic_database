@@ -79,3 +79,5 @@ CREATE TABLE visits(
 
 -- Alter the owners table by adding new column
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX email_asc On owners(email ASC);
