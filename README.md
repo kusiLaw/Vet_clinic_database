@@ -28,6 +28,11 @@ To get a local copy up and running follow these simple example steps
   - Twitter: [@Twitterhandle](https://twitter.com/kusilaw)
   - Linkedin: [Linkedin](https://www.linkedin.com/in/lawrence-kusi-55a662104)
 
+- Aakash Verma
+  - GitHub: [@skyv26](https://github.com/skyv26)
+  - Twitter: [@vrma_aakash](https://twitter.com/vrma_aakash)
+  - Linkedin: [@skyv2022](https://www.linkedin.com/in/skyv2022)
+
 
 ### :handshake: Contributing
 Contributions, issues, and feature requests are welcome! 

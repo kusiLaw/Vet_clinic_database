@@ -76,3 +76,10 @@ CREATE TABLE visits(
     REFERENCES vets(id)
      ON DELETE CASCADE     
 );
+
+-- Alter the owners table by adding new column
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX email_asc On owners(email ASC);
+CREATE INDEX animals_id_asc on visits(animals_id ASC);
+CREATE INDEX vet_id_indexing on visits(vet_id asc);
