@@ -64,3 +64,18 @@ CREATE TABLE invoice_items (
  FOREIGN KEY(treatment_id)
  REFERENCES treatments(id)
 ON DELETE CASCADE );
+
+CREATE TABLE medical_histories_treatments (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  medical_history_id INT NOT NULL,
+  treatments_id INT NOT NULL,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_medical_link
+  FOREIGN KEY (medical_history_id)
+  REFERENCES medical_histories (id)
+  ON DELETE CASCADE,
+  CONSTRAINT fk_treatment_link
+  FOREIGN KEY(treatments_id)
+  REFERENCES treatments (id)
+  ON DELETE CASCADE
+ );
