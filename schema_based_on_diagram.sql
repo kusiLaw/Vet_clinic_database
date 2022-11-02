@@ -48,3 +48,19 @@ CREATE TABLE invoices(
   ON DELETE CASCADE     
 );
 
+CREATE TABLE invoice_items (
+ id INT GENERATED ALWAYS AS IDENTITY,
+ unit_price DECIMAL NOT NULL,
+ quantity INT NOT NULL,
+ total_price DECIMAL NOT NULL,
+ invoice_id INT NOT NULL,
+ treatment_id INT NOT NULL,
+ PRIMARY KEY (id),
+ CONSTRAINT fk_invoice
+ FOREIGN KEY (invoice_id)
+ REFERENCES invoices(id)
+ ON DELETE CASCADE,
+ CONSTRAINT fk_treatment
+ FOREIGN KEY(treatment_id)
+ REFERENCES treatments(id)
+ON DELETE CASCADE );
