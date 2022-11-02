@@ -48,6 +48,7 @@ CREATE TABLE invoices(
   ON DELETE CASCADE     
 );
 
+-- Invoices item table
 CREATE TABLE invoice_items (
  id INT GENERATED ALWAYS AS IDENTITY,
  unit_price DECIMAL NOT NULL,
@@ -65,6 +66,7 @@ CREATE TABLE invoice_items (
  REFERENCES treatments(id)
 ON DELETE CASCADE );
 
+-- Treatment Table
 CREATE TABLE medical_histories_treatments (
   id INT GENERATED ALWAYS AS IDENTITY,
   medical_history_id INT NOT NULL,
